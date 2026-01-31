@@ -148,7 +148,7 @@ body {
 }
 
 footer > p{
-padding-top: 10px;
+padding-top: 10px;  
   font-size: small;
   color: var(--text-secondary);
   cursor: pointer;
