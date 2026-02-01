@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Letícia Marcolino</title>
+  <link rel="shortcut icon" href="programacao.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="plus_css.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <img src="imagem/foto_perfil.jpeg"
+           alt="Foto de perfil">
+
+      <h1>Letícia Marcolino</h1>
+      <p class="role">Desenvolvedora | Developer</p>
+
+
+      
+      <div class="social">
+          <a href="index.html" title="Home">
+    <i class="fas fa-home"></i></a>
+  
+        <a href="https://github.com/Leticia650" target="_blank"><i class="fab fa-github"></i></a>
+
+        <a href="https://www.linkedin.com/in/let%C3%ADcia-marcolino-00015a126/" target="_blank"><i class="fab fa-linkedin"></i></a>
+
+        <a href="https://instagram.com/_leticiamarcolino" target="_blank">
+  <i class="fab fa-instagram"></i></a>
+  
+
+<a href="mais.html"><i class="fas fa-plus"></a></i>
+      </div>
+    </aside>
+
+    
+    <main class="content">
+
+      <section>
+      
+  <section class="grid">
+    <div class="card-container">
+      <div class="card" data-title="HTML" data-text="HTML estrutura a página usando tags semânticas, melhorando acessibilidade e SEO.">
+        <div class="card-face front"><h3>HTML</h3></div>
+        <div class="card-face back"><p class="card-text">Clique para saber mais</p></div>
+      </div>
+    </div>
+
+    <div class="card-container">
+      <div class="card" data-title="CSS" data-text="CSS é responsável pelo visual da aplicação, layouts responsivos e animações.">
+        <div class="card-face front"><h3>CSS</h3></div>
+        <div class="card-face back"><p class="card-text">Clique para saber mais</p></div>
+      </div>
+    </div>
+
+    <div class="card-container">
+      <div class="card" data-title="JavaScript" data-text="JavaScript adiciona interatividade, lógica e dinamismo às páginas web.">
+        <div class="card-face front"><h3 >JavaScript</h3></div>
+        <div class="card-face back"><p class="card-text">Clique para saber mais</p></div>
+      </div>
+    </div>
+
+    <div class="card-container">
+      <div class="card" data-title="UI Design" data-text="UI Design foca em interfaces intuitivas, consistentes e centradas no usuário.">
+        <div class="card-face front"><h3>UI Design</h3></div>
+        <div class="card-face back"><p class="card-text">Clique para saber mais</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OVERLAY -->
+  <div class="overlay" id="overlay">
+    <div class="expanded-card">
+      <button class="close-btn" id="closeBtn">✕</button>
+      <h2 id="expandedTitle"></h2>
+      <p id="expandedText"></p>
+    </div>
+  </div>
+<script>
+  const cards = document.querySelectorAll(".card");
+  const overlay = document.getElementById("overlay");
+  const title = document.getElementById("expandedTitle");
+  const text = document.getElementById("expandedText");
+  const closeBtn = document.getElementById("closeBtn");
+
+  cards.forEach(card => {
+    card.addEventListener("click", () => {
+      card.classList.add("flipped");
+      title.textContent = card.dataset.title;
+      text.textContent = card.dataset.text;
+      overlay.classList.add("active");
+    });
+  });
+
+  closeBtn.addEventListener("click", () => {
+    overlay.classList.remove("active");
+    cards.forEach(card => card.classList.remove("flipped"));
+  });
+</script>
+
+
+
+      </section>
+
+    </main>
+
+  </div>
+ 
+
+  
+  <footer class="footer-global">
+    <p>© 2026 • Desenvolvido por 
+        <a href="https://www.linkedin.com/in/let%C3%ADcia-marcolino-00015a126/" target="_blank"><em>Letícia Marcolino</em></a>
+    </p>
+
+    
+  </footer>
+
+
+</body>
+</html>

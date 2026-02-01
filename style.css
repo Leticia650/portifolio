@@ -18,6 +18,9 @@
 }
 
 body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   background-color: var(--bg-main);
   color: var(--text-primary);
   min-height: 100vh;
@@ -25,8 +28,13 @@ body {
   justify-content: center;
   align-items: center;
 }
+.home{
+   text-decoration: none;
+    color: var(--text-primary);
+}
 
 .container {
+   flex: 1;                
   display: flex;
   width: 900px;
   background: var(--bg-card);
@@ -36,6 +44,9 @@ body {
 
 /* SIDEBAR */
 .sidebar {
+    flex-shrink: 0;     /* 👈 ISSO resolve */
+
+    position: relative;
   width: 280px;
   background: var(--bg-sidebar);
   padding: 30px;
@@ -64,7 +75,7 @@ body {
 }
 
 .social i {
-  margin: 0 8px;
+  margin: 0 7px;
   font-size: 1.2rem;
   color: var(--text-secondary);
   cursor: pointer;
@@ -142,11 +153,28 @@ body {
   flex-direction: column;
 }
 
-/* container ocupa o espaço disponível */
-.container {
-  flex: 1;
+
+
+footer > p{
+padding-top: 10px;  
+  font-size: small;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: 0.3s;
+
 }
 
+.footer-global > p > a {
+
+    text-decoration: none;
+    color: var(--text-primary);
+}
+
+.footer-global > p > a:hover {
+
+    text-decoration: none;
+    color: var(--accent)
+}
 footer > p{
 padding-top: 10px;  
   font-size: small;
