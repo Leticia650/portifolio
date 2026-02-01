@@ -30,6 +30,10 @@
   grid-template-columns: repeat(2, minmax(260px, 1fr));
   gap: 30px;
   
+} 
+
+section > h2{
+  margin-bottom: 30px;
 }
 
     .overlay {
