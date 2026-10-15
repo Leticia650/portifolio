@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -10,11 +9,352 @@
 
   <link rel="shortcut icon" href="programacao.png" type="image/x-icon">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="plus_css.css">
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+ 
 
-  
+  <style>
+    .content {
+      min-width: 0;
+    }
+
+    .page-intro {
+      margin-bottom: 38px;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+
+    .page-intro h2 {
+      margin-bottom: 12px;
+    }
+
+    .section-description {
+      color: var(--text-secondary);
+      max-width: 720px;
+    }
+
+    .section-heading {
+      margin-bottom: 22px;
+    }
+
+    .section-heading h2 {
+      margin-bottom: 8px;
+    }
+
+    .section-heading p {
+      font-size: 0.9rem;
+    }
+
+    /* QUALIFICAÇÕES */
+
+    .qualifications {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .qualification-card {
+      padding: 22px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      transition: border-color 0.25s, transform 0.25s;
+    }
+
+    .qualification-card:hover {
+      border-color: #4caf8455;
+      transform: translateY(-3px);
+    }
+
+    .qualification-icon {
+      color: var(--accent);
+      font-size: 1.25rem;
+      margin-bottom: 14px;
+    }
+
+    .qualification-card h3 {
+      font-size: 1rem;
+      margin-bottom: 12px;
+    }
+
+    .qualification-card p,
+    .qualification-card li {
+      color: var(--text-secondary);
+      font-size: 0.88rem;
+      line-height: 1.7;
+    }
+
+    .qualification-card ul {
+      padding-left: 18px;
+    }
+
+    .qualification-card li {
+      margin-bottom: 5px;
+    }
+
+    .qualification-card strong {
+      color: var(--text-primary);
+    }
+
+    /* PROJETOS */
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+      margin-top: 24px;
+    }
+
+    .project-card {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      padding: 24px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      transition: border-color 0.25s, transform 0.25s;
+    }
+
+    .project-card:hover {
+      border-color: #4caf8455;
+      transform: translateY(-3px);
+    }
+
+    .project-icon {
+      width: 46px;
+      height: 46px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      background: #4caf8414;
+      color: var(--accent);
+      font-size: 1.3rem;
+      margin-bottom: 18px;
+    }
+
+    .project-status {
+      align-self: flex-start;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 0.72rem;
+      color: var(--text-secondary);
+      padding: 5px 9px;
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      margin-bottom: 14px;
+    }
+
+    .project-status i {
+      font-size: 0.48rem;
+      color: var(--accent);
+    }
+
+    .project-card h3 {
+      font-size: 1.12rem;
+      margin-bottom: 12px;
+    }
+
+    .project-card p {
+      font-size: 0.9rem;
+      margin-bottom: 14px;
+    }
+
+    .project-meta {
+      color: var(--text-secondary);
+      font-size: 0.8rem;
+      margin-top: auto;
+      padding-top: 10px;
+      margin-bottom: 18px;
+    }
+
+    .project-meta strong {
+      color: var(--text-primary);
+    }
+
+    .project-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      align-self: flex-start;
+      padding: 10px 14px;
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.85rem;
+      border: 1px solid #4caf8450;
+      border-radius: 8px;
+      transition: background 0.25s, border-color 0.25s;
+    }
+
+    .project-link:hover {
+      background: #4caf8412;
+      border-color: var(--accent);
+    }
+
+    .project-link i {
+      font-size: 0.8rem;
+    }
+
+    .project-note {
+      padding: 14px;
+      background: #ffffff05;
+      border-left: 2px solid var(--accent);
+      border-radius: 0 6px 6px 0;
+      font-size: 0.82rem !important;
+    }
+
+    /* HABILIDADES INTERATIVAS */
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .skill-card {
+      min-height: 145px;
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: left;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      cursor: pointer;
+      color: var(--text-primary);
+      transition: border-color 0.25s, transform 0.25s;
+    }
+
+    .skill-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-3px);
+    }
+
+    .skill-card > i {
+      color: var(--accent);
+      font-size: 1.35rem;
+      margin-bottom: 14px;
+    }
+
+    .skill-card h3 {
+      font-size: 1rem;
+      margin-bottom: 8px;
+    }
+
+    .skill-card p {
+      font-size: 0.82rem;
+    }
+
+    /* MODAL */
+
+    .overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.82);
+      backdrop-filter: blur(5px);
+    }
+
+    .overlay.active {
+      display: flex;
+    }
+
+    .expanded-card {
+      position: relative;
+      width: 100%;
+      max-width: 560px;
+      max-height: 80vh;
+      overflow-y: auto;
+      padding: 36px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 14px;
+      animation: scaleIn 0.2s ease;
+    }
+
+    .expanded-card h2 {
+      color: var(--accent);
+      padding-right: 24px;
+      margin-bottom: 16px;
+    }
+
+    .expanded-card p {
+      line-height: 1.8;
+      white-space: pre-line;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 16px;
+      right: 18px;
+      border: none;
+      background: none;
+      color: var(--text-secondary);
+      font-size: 1.4rem;
+      cursor: pointer;
+    }
+
+    .close-btn:hover {
+      color: var(--accent);
+    }
+
+    @keyframes scaleIn {
+      from {
+        opacity: 0;
+        transform: scale(0.96);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @media (max-width: 850px) {
+      .qualifications,
+      .projects {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .qualification-card,
+      .project-card {
+        padding: 20px;
+      }
+
+      .expanded-card {
+        padding: 28px 22px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -26,15 +366,15 @@
 
       <img
         src="imagem/foto_perfil.jpeg"
-        alt="Foto de perfil de Letícia Marcolino"
+        alt="Foto de perfil de Letícia Marcolino" data-i18n-alt="profile-alt"
       >
 
       <h1>Letícia Marcolino</h1>
 
-      <p class="role">Desenvolvimento / Análise de Dados</p>
+      <p class="role" data-i18n="role">Dev / Análise de Dados</p>
 
       <div class="social">
-        <a href="index.html" title="Início" aria-label="Início">
+        <a href="index.html" title="Início" aria-label="Início" data-i18n-title="home-title">
           <i class="fas fa-home" aria-hidden="true"></i>
         </a>
 
@@ -50,13 +390,9 @@
           <i class="fab fa-linkedin" aria-hidden="true"></i>
         </a>
 
-        <a href="https://instagram.com/_leticiamarcolino"
-           target="_blank" rel="noopener noreferrer"
-           title="Instagram" aria-label="Instagram">
-          <i class="fab fa-instagram" aria-hidden="true"></i>
-        </a>
 
-        <a href="mais.html" title="Mais informações" aria-label="Mais informações">
+
+        <a href="mais.html" title="Mais" aria-label="Mais informações" data-i18n-title="more-title">
           <i class="fas fa-plus" aria-hidden="true"></i>
         </a>
       </div>
@@ -66,10 +402,15 @@
     <!-- CONTEÚDO -->
     <main class="content">
 
+      <div class="language-bar">
+        <a href="#" id="language-toggle" class="language-link" lang="en"
+           aria-label="Translate the entire page to English">English ↗</a>
+      </div>
+
       <div class="page-intro">
-        <p class="eyebrow">Trajetória profissional</p>
-        <h2>Qualificações e Projetos</h2>
-        <p class="section-description">
+        <p class="eyebrow" data-i18n="more-eyebrow">Trajetória profissional</p>
+        <h2 data-i18n="more-title-main">Qualificações e Projetos</h2>
+        <p class="section-description" data-i18n="more-intro">
           Aprendizado contínuo, desenvolvimento de habilidades técnicas
           e aplicação prática do conhecimento para resolver problemas reais.
         </p>
@@ -79,8 +420,8 @@
       <section id="qualificacoes">
 
         <div class="section-heading">
-          <h2><i class="fas fa-graduation-cap"></i> Qualificações</h2>
-          <p>Cursos e conhecimentos desenvolvidos ao longo da minha trajetória.</p>
+          <h2><i class="fas fa-graduation-cap"></i> <span data-i18n="qualifications-title">Qualificações</span></h2>
+          <p data-i18n="qualifications-intro">Cursos e conhecimentos desenvolvidos ao longo da minha trajetória.</p>
         </div>
 
         <div class="qualifications">
@@ -143,8 +484,8 @@
       <section id="projetos">
 
         <div class="section-heading">
-          <h2><i class="fas fa-laptop-code"></i> Projetos práticos</h2>
-          <p>
+          <h2><i class="fas fa-laptop-code"></i> <span data-i18n="projects-title">Projetos práticos</span></h2>
+          <p data-i18n="projects-intro">
             Soluções desenvolvidas a partir de necessidades reais e oportunidades
             de melhoria de processos.
           </p>
@@ -249,8 +590,8 @@
       <section id="habilidades">
 
         <div class="section-heading">
-          <h2><i class="fas fa-layer-group"></i> Aprofundando habilidades</h2>
-          <p>
+          <h2><i class="fas fa-layer-group"></i> <span data-i18n="skills-title">Aprofundando habilidades</span></h2>
+          <p data-i18n="skills-intro">
             Conhecimentos que venho desenvolvendo por meio de estudos,
             prática e construção de projetos.
           </p>
@@ -298,6 +639,28 @@
             <p>Comunicação oral e escrita. Clique para saber mais.</p>
           </button>
 
+          <button class="skill-card"
+            type="button"
+            data-title="Python"
+            data-modal-key="Python"
+            data-text="Tenho desenvolvido meus conhecimentos em Python por meio de estudos e projetos práticos. A linguagem permite automatizar tarefas, organizar informações e criar soluções que tornam processos mais eficientes. Quero continuar aprofundando minha lógica de programação e aplicando Python em projetos de desenvolvimento e análise de dados.">
+
+            <i class="fab fa-python" aria-hidden="true"></i>
+            <h3>Python</h3>
+            <p>Programação, automação de tarefas e desenvolvimento de soluções. Clique para saber mais.</p>
+          </button>
+
+          <button class="skill-card"
+            type="button"
+            data-title="Análise de Dados"
+            data-modal-key="Análise de Dados"
+            data-text="Venho desenvolvendo habilidades em análise de dados utilizando SQL para consultar e organizar informações, Pandas para limpar, transformar e explorar conjuntos de dados com Python, e Power BI para criar visualizações e dashboards. Meu objetivo é transformar dados em informações claras que apoiem a identificação de padrões, a melhoria de processos e a tomada de decisões.">
+
+            <i class="fas fa-chart-column" aria-hidden="true"></i>
+            <h3>Análise de Dados</h3>
+            <p>SQL, Pandas e Power BI para explorar dados e criar dashboards. Clique para saber mais.</p>
+          </button>
+
         </div>
       </section>
 
@@ -307,7 +670,7 @@
   <!-- RODAPÉ -->
   <footer class="footer-global">
     <p>
-      © 2026 • Desenvolvido por
+      <span data-i18n="footer-text">© 2026 • Desenvolvido por</span>
       <a
         href="https://www.linkedin.com/in/let%C3%ADcia-marcolino-00015a126/"
         target="_blank"
@@ -353,7 +716,7 @@
     function openModal(card) {
       lastFocusedElement = card;
 
-      expandedTitle.textContent = card.dataset.title;
+      expandedTitle.textContent = card.dataset.modalTitle || card.dataset.title;
       expandedText.textContent = card.dataset.text;
 
       overlay.classList.add("active");
@@ -389,6 +752,199 @@
       if (event.key === "Escape" && overlay.classList.contains("active")) {
         closeModal();
       }
+    });
+  </script>
+
+
+  <script>
+    // Tradução desta página, mantendo o mesmo botão e padrão visual da index.
+    const pageTranslations = {
+      en: {
+        "role": "Software Development / Data Analysis",
+        "more-eyebrow": "Professional journey",
+        "more-title-main": "Qualifications and Projects",
+        "more-intro": "Continuous learning, technical skill development, and practical application of knowledge to solve real problems.",
+        "qualifications-title": "Qualifications",
+        "qualifications-intro": "Courses and knowledge developed throughout my journey.",
+        "projects-title": "Practical projects",
+        "projects-intro": "Solutions developed from real needs and opportunities to improve processes.",
+        "skills-title": "Developing my skills",
+        "skills-intro": "Knowledge I continue to develop through study, practice, and project building.",
+        "footer-text": "© 2026 • Developed by",
+        "home-title": "Home",
+        "more-title": "More",
+        "profile-alt": "Profile photo of Letícia Marcolino"
+      }
+    };
+
+    const toggle = document.getElementById("language-toggle");
+    let currentLanguage = "pt";
+
+    const textMap = {
+      en: [
+        ["#projetos .section-heading p", "Solutions developed from real needs and opportunities to improve processes."],
+        ["#habilidades .section-heading p", "Knowledge I continue to develop through study, practice, and project building."],
+        [".qualification-card:nth-child(1) h3", "Technical training"],
+        [".qualification-card:nth-child(1) p:nth-of-type(1)", "Natasha Franco Vieira"],
+        [".qualification-card:nth-child(1) p:nth-of-type(2)", "Technical course in Internet Computing."],
+        [".qualification-card:nth-child(2) h3", "Udemy"],
+        [".qualification-card:nth-child(2) li:nth-child(1)", "Master English Grammar – Advanced Level"],
+        [".qualification-card:nth-child(2) li:nth-child(2)", "Continuous Improvement Specialist"],
+        [".qualification-card:nth-child(2) li:nth-child(3)", "Power BI – from basic to advanced"],
+        [".qualification-card:nth-child(3) h3", "Curso em Vídeo"],
+        [".qualification-card:nth-child(3) li:nth-child(1)", "HTML5 and CSS3"],
+        [".qualification-card:nth-child(3) li:nth-child(2)", "Basic JavaScript"],
+        [".qualification-card:nth-child(4) h3", "POINT Informática"],
+        [".qualification-card:nth-child(4) p", "Professional computer course – Office Suite."],
+        [".qualification-card:nth-child(5) h3", "Fundação Bradesco"],
+        [".qualification-card:nth-child(5) li:nth-child(1)", "Database Analysis"],
+        [".qualification-card:nth-child(5) li:nth-child(2)", "Information Technology Security"],
+        [".qualification-card:nth-child(5) li:nth-child(3)", "Data Analysis in Power BI"],
+        [".qualification-card:nth-child(6) h3", "Hashtag Treinamentos"],
+        [".qualification-card:nth-child(6) li:nth-child(1)", "Artificial Intelligence Journey"],
+        [".qualification-card:nth-child(6) li:nth-child(2)", "Python Journey"],
+        [".project-card:nth-child(1) .project-status", '<i class="fas fa-circle" aria-hidden="true"></i> In use in production'],
+        [".project-card:nth-child(1) h3", "Internal Tracking System"],
+        [".project-card:nth-child(1) p:nth-of-type(1)", "Application developed to optimize an internal product-tracking process in pharmaceutical manufacturing."],
+        [".project-card:nth-child(1) p:nth-of-type(2)", "The project came from identifying an opportunity for operational improvement, focusing on making it easier to monitor and trace process-related information."],
+        [".project-card:nth-child(1) .project-meta", "<strong>Practical application:</strong> process improvement and traceability."],
+        [".project-card:nth-child(1) .project-link", 'Explore the project <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>'],
+        [".project-card:nth-child(2) .project-status", '<i class="fas fa-circle" aria-hidden="true"></i> In development'],
+        [".project-card:nth-child(2) p:nth-of-type(1)", "Project created to make shift handovers easier by centralizing incident records and relevant information on a single computer."],
+        [".project-card:nth-child(2) p:nth-of-type(2)", "The goal is to improve continuity of activities, make previous records easier to consult, and support information traceability between shifts."],
+        [".project-card:nth-child(2) .project-note", "<strong>Current status:</strong> prototype in development. The first version uses LocalStorage to store records in the browser. The solution has not yet been officially presented or implemented in the work process."],
+        [".project-card:nth-child(2) .project-meta", "<strong>Focus:</strong> organization, operational continuity, and information logging."],
+        [".project-card:nth-child(2) .project-link", 'Explore the prototype <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>'],
+        [".skill-card:nth-child(1) h3", "HTML5"],
+        [".skill-card:nth-child(1) p", "Web page structure and semantics. Click to learn more."],
+        [".skill-card:nth-child(2) h3", "CSS3"],
+        [".skill-card:nth-child(2) p", "Styling, responsiveness, and interfaces. Click to learn more."],
+        [".skill-card:nth-child(3) h3", "JavaScript"],
+        [".skill-card:nth-child(3) p", "Logic and interactivity for web applications. Click to learn more."],
+        [".skill-card:nth-child(4) h3", "Advanced English"],
+        [".skill-card:nth-child(4) p", "Oral and written communication. Click to learn more."],
+        [".skill-card:nth-child(5) h3", "Python"],
+        [".skill-card:nth-child(5) p", "Programming, task automation, and solution development. Click to learn more."],
+        [".skill-card:nth-child(6) h3", "Data Analysis"],
+        [".skill-card:nth-child(6) p", "SQL, Pandas, and Power BI to explore data and build dashboards. Click to learn more."]
+      ],
+      pt: [
+        ["#projetos .section-heading p", "Soluções desenvolvidas a partir de necessidades reais e oportunidades de melhoria de processos."],
+        ["#habilidades .section-heading p", "Conhecimentos que venho desenvolvendo por meio de estudos, prática e construção de projetos."],
+        [".qualification-card:nth-child(1) h3", "Formação técnica"],
+        [".qualification-card:nth-child(1) p:nth-of-type(1)", "Natasha Franco Vieira"],
+        [".qualification-card:nth-child(1) p:nth-of-type(2)", "Curso técnico de Informática para Internet."],
+        [".qualification-card:nth-child(2) h3", "Udemy"],
+        [".qualification-card:nth-child(2) li:nth-child(1)", "Master English Grammar – Advanced Level"],
+        [".qualification-card:nth-child(2) li:nth-child(2)", "Especialista em Melhoria Contínua"],
+        [".qualification-card:nth-child(2) li:nth-child(3)", "Power BI – do básico ao avançado"],
+        [".qualification-card:nth-child(3) h3", "Curso em Vídeo"],
+        [".qualification-card:nth-child(3) li:nth-child(1)", "HTML5 e CSS3"],
+        [".qualification-card:nth-child(3) li:nth-child(2)", "JavaScript Básico"],
+        [".qualification-card:nth-child(4) h3", "POINT Informática"],
+        [".qualification-card:nth-child(4) p", "Curso profissionalizante de informática – Pacote Office."],
+        [".qualification-card:nth-child(5) h3", "Fundação Bradesco"],
+        [".qualification-card:nth-child(5) li:nth-child(1)", "Analisando Banco de Dados"],
+        [".qualification-card:nth-child(5) li:nth-child(2)", "Segurança em Tecnologia da Informação"],
+        [".qualification-card:nth-child(5) li:nth-child(3)", "Análise de Dados no Power BI"],
+        [".qualification-card:nth-child(6) h3", "Hashtag Treinamentos"],
+        [".qualification-card:nth-child(6) li:nth-child(1)", "Jornada Inteligência Artificial"],
+        [".qualification-card:nth-child(6) li:nth-child(2)", "Jornada Python"],
+        [".project-card:nth-child(1) .project-status", '<i class="fas fa-circle" aria-hidden="true"></i> Em uso na produção'],
+        [".project-card:nth-child(1) h3", "Sistema de Rastreamento Interno"],
+        [".project-card:nth-child(1) p:nth-of-type(1)", "Aplicação desenvolvida para otimizar um processo interno de rastreamento de produtos no ambiente de produção farmacêutica."],
+        [".project-card:nth-child(1) p:nth-of-type(2)", "O projeto surgiu da identificação de uma oportunidade de melhoria operacional, com foco em facilitar o acompanhamento e a rastreabilidade das informações relacionadas ao processo."],
+        [".project-card:nth-child(1) .project-meta", "<strong>Aplicação prática:</strong> melhoria de processo e rastreabilidade."],
+        [".project-card:nth-child(1) .project-link", 'Conhecer o projeto <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>'],
+        [".project-card:nth-child(2) .project-status", '<i class="fas fa-circle" aria-hidden="true"></i> Em desenvolvimento'],
+        [".project-card:nth-child(2) p:nth-of-type(1)", "Projeto criado com o objetivo de facilitar a passagem de turno entre colegas, centralizando os registros das ocorrências e informações relevantes em um único computador."],
+        [".project-card:nth-child(2) p:nth-of-type(2)", "A proposta é melhorar a continuidade das atividades, facilitar a consulta aos registros anteriores e contribuir para a rastreabilidade das informações entre turnos."],
+        [".project-card:nth-child(2) .project-note", "<strong>Estado atual:</strong> protótipo em desenvolvimento. A primeira versão utiliza LocalStorage para armazenar os registros no navegador. A solução ainda não foi apresentada oficialmente nem implementada no processo de trabalho."],
+        [".project-card:nth-child(2) .project-meta", "<strong>Foco:</strong> organização, continuidade operacional e registro de informações."],
+        [".project-card:nth-child(2) .project-link", 'Explorar o protótipo <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>'],
+        [".skill-card:nth-child(1) h3", "HTML5"],
+        [".skill-card:nth-child(1) p", "Estruturação e semântica de páginas web. Clique para saber mais."],
+        [".skill-card:nth-child(2) h3", "CSS3"],
+        [".skill-card:nth-child(2) p", "Estilização, responsividade e interfaces. Clique para saber mais."],
+        [".skill-card:nth-child(3) h3", "JavaScript"],
+        [".skill-card:nth-child(3) p", "Lógica e interatividade para aplicações web. Clique para saber mais."],
+        [".skill-card:nth-child(4) h3", "Inglês avançado"],
+        [".skill-card:nth-child(4) p", "Comunicação oral e escrita. Clique para saber mais."],
+        [".skill-card:nth-child(5) h3", "Python"],
+        [".skill-card:nth-child(5) p", "Programação, automação de tarefas e desenvolvimento de soluções. Clique para saber mais."],
+        [".skill-card:nth-child(6) h3", "Análise de Dados"],
+        [".skill-card:nth-child(6) p", "SQL, Pandas e Power BI para explorar dados e criar dashboards. Clique para saber mais."]
+      ]
+    };
+
+    const originalModalTexts = {
+      "HTML": "O HTML foi minha porta de entrada para o desenvolvimento web. Por meio de estudos e prática, venho construindo páginas estruturadas, acessíveis e organizadas, aplicando esse conhecimento nos meus projetos.",
+      "CSS": "O CSS permite transformar estruturas HTML em interfaces visuais. Tenho praticado a criação de layouts responsivos, organização de componentes, paletas de cores e estilos que valorizam a experiência do usuário.",
+      "JavaScript": "JavaScript adiciona lógica e interatividade às páginas web. Tenho desenvolvido meus conhecimentos por meio de exercícios e projetos práticos, explorando eventos, manipulação do DOM e funcionalidades para aplicações.",
+      "Inglês": "Estudo inglês há mais de 13 anos, com formação em escola de idiomas e cursos complementares. Tenho nível avançado e experiência de contato com falantes nativos, além de vivência com traduções orais em contexto aeroportuário.",
+      "Python": "Tenho desenvolvido meus conhecimentos em Python por meio de estudos e projetos práticos. A linguagem permite automatizar tarefas, organizar informações e criar soluções que tornam processos mais eficientes. Quero continuar aprofundando minha lógica de programação e aplicando Python em projetos de desenvolvimento e análise de dados.",
+      "Análise de Dados": "Venho desenvolvendo habilidades em análise de dados utilizando SQL para consultar e organizar informações, Pandas para limpar, transformar e explorar conjuntos de dados com Python, e Power BI para criar visualizações e dashboards. Meu objetivo é transformar dados em informações claras que apoiem a identificação de padrões, a melhoria de processos e a tomada de decisões."
+    };
+    const englishModalTexts = {
+      "HTML": "HTML was my entry point into web development. Through study and practice, I have been building structured, accessible, and organized pages and applying this knowledge to my projects.",
+      "CSS": "CSS transforms HTML structures into visual interfaces. I have been practicing responsive layouts, component organization, color palettes, and styles that improve the user experience.",
+      "JavaScript": "JavaScript adds logic and interactivity to web pages. I have been developing my skills through exercises and practical projects, exploring events, DOM manipulation, and application features.",
+      "Inglês": "I have studied English for over 13 years, including language-school training and supplementary courses. I have an advanced level, experience interacting with native speakers, and experience providing oral translations in an airport context.",
+      "Python": "I have been developing my Python skills through study and practical projects. The language can be used to automate tasks, organize information, and build solutions that make processes more efficient. I want to keep strengthening my programming logic and applying Python to software development and data analysis projects.",
+      "Análise de Dados": "I have been developing data analysis skills using SQL to query and organize information, Pandas to clean, transform, and explore datasets with Python, and Power BI to create visualizations and dashboards. My goal is to turn data into clear information that helps identify patterns, improve processes, and support decision-making."
+    };
+
+    function setLanguage(language) {
+      currentLanguage = language;
+      document.documentElement.lang = language === "en" ? "en" : "pt-BR";
+      document.querySelectorAll("[data-i18n]").forEach((element) => {
+        const key = element.dataset.i18n;
+        if (language === "en" && pageTranslations.en[key]) {
+          element.textContent = pageTranslations.en[key];
+        } else if (language === "pt") {
+          const originals = {
+            "role": "Dev / Análise de Dados",
+            "more-eyebrow": "Trajetória profissional",
+            "more-title-main": "Qualificações e Projetos",
+            "more-intro": "Aprendizado contínuo, desenvolvimento de habilidades técnicas e aplicação prática do conhecimento para resolver problemas reais.",
+            "qualifications-title": "Qualificações",
+            "qualifications-intro": "Cursos e conhecimentos desenvolvidos ao longo da minha trajetória.",
+            "projects-title": "Projetos práticos",
+            "projects-intro": "Soluções desenvolvidas a partir de necessidades reais e oportunidades de melhoria de processos.",
+            "skills-title": "Aprofundando habilidades",
+            "skills-intro": "Conhecimentos que venho desenvolvendo por meio de estudos, prática e construção de projetos.",
+            "footer-text": "© 2026 • Desenvolvido por"
+          };
+          if (originals[key]) element.textContent = originals[key];
+        }
+      });
+      (textMap[language] || []).forEach(([selector, html]) => {
+        const element = document.querySelector(selector);
+        if (element) element.innerHTML = html;
+      });
+      document.querySelectorAll(".skill-card").forEach((card) => {
+        const key = card.dataset.modalKey || card.dataset.title;
+        card.dataset.modalKey = key;
+        if (originalModalTexts[key]) {
+          card.dataset.text = language === "en" ? englishModalTexts[key] : originalModalTexts[key];
+          card.dataset.modalTitle = language === "en"
+            ? ({ "HTML":"HTML5", "CSS":"CSS3", "JavaScript":"JavaScript", "Inglês":"Advanced English", "Python":"Python", "Análise de Dados":"Data Analysis" }[key] || key)
+            : key;
+        }
+      });
+      document.querySelectorAll('[data-i18n-title]').forEach((element) => {
+        const key = element.dataset.i18nTitle;
+        element.title = language === "en" ? ({ "home-title":"Home", "more-title":"More" }[key] || element.title) : ({ "home-title":"Início", "more-title":"Mais" }[key] || element.title);
+      });
+      const footerLink = document.querySelector(".footer-global a");
+      if (footerLink) footerLink.setAttribute("aria-label", language === "en" ? "Letícia Marcolino on LinkedIn" : "Letícia Marcolino no LinkedIn");
+      toggle.textContent = language === "en" ? "Português ↗" : "English ↗";
+      toggle.setAttribute("aria-label", language === "en" ? "Translate the entire page to Portuguese" : "Translate the entire page to English");
+    }
+
+    toggle.addEventListener("click", (event) => {
+      event.preventDefault();
+      setLanguage(currentLanguage === "pt" ? "en" : "pt");
     });
   </script>
 

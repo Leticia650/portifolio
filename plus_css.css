@@ -339,3 +339,26 @@
         transition-duration: 0.01ms !important;
       }
     }
+
+    
+language-bar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+  color: var(--text-secondary);
+}
+.language-link {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  font: inherit;
+  cursor: pointer;
+  padding: 5px 8px;
+  transition: color 0.2s ease;
+}
+.language-link:hover,
+.language-link:focus-visible {
+  color: var(--accent);
+}
