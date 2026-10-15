@@ -1,108 +1,200 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio de Letícia Marcolino, profissional em transição para desenvolvimento de software e análise de dados.">
+
   <title>Letícia Marcolino</title>
+
   <link rel="shortcut icon" href="programacao.png" type="image/x-icon">
   <link rel="stylesheet" href="style.css">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <script src="language.js" defer></script>
 </head>
+
 <body>
 
   <div class="container">
 
     <!-- SIDEBAR -->
     <aside class="sidebar">
-      <img src="imagem/foto_perfil.jpeg"
-           alt="Foto de perfil">
+
+      <img
+        src="imagem/foto_perfil.jpeg"
+        alt="Foto de perfil de Letícia Marcolino"
+        data-i18n-alt="profile-alt"
+      >
 
       <h1>Letícia Marcolino</h1>
-      <p class="role">Desenvolvedora | Developer</p>
+
+      <p class="role" data-i18n="role">
+        Dev / Análise de Dados
+      </p>
 
       <div class="social">
-           
-    <a href="index.html" title="Home"><i class="fas fa-home"></a></i>
 
-        <a href="https://github.com/Leticia650" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="index.html" title="Início" data-i18n-title="home-title"
+           aria-label="Início">
+          <i class="fas fa-home" aria-hidden="true"></i>
+        </a>
 
-        <a href="https://www.linkedin.com/in/let%C3%ADcia-marcolino-00015a126/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Leticia650"
+           target="_blank" rel="noopener noreferrer"
+           title="GitHub" aria-label="GitHub">
+          <i class="fab fa-github" aria-hidden="true"></i>
+        </a>
 
-        <a href="https://instagram.com/_leticiamarcolino" target="_blank">
-  <i class="fab fa-instagram"></i></a>
-  
+        <a href="https://www.linkedin.com/in/let%C3%ADcia-marcolino-00015a126/"
+           target="_blank" rel="noopener noreferrer"
+           title="LinkedIn" aria-label="LinkedIn">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
 
-    <a href="mais.html"><i class="fas fa-plus"></a></i>
+        <a href="mais.html" title="Mais" data-i18n-title="more-title"
+           aria-label="Mais informações">
+          <i class="fas fa-plus" aria-hidden="true"></i>
+        </a>
 
       </div>
     </aside>
 
-    
+    <!-- CONTEÚDO PRINCIPAL -->
     <main class="content">
 
-      <section>
-        <h2>Sobre Mim | About Me</h2>
-        <p>
-          Sou desenvolvedora em formação apaixonada por criar interfaces modernas,
-          funcionais e acessíveis. Trabalho com foco em experiência
-          do usuário e código limpo. Atualmente cursando <strong>Análise e Desenvolvimento de Sistemas</strong> (técnologo) e <strong>Programação FullStack</strong>, com maior experiência em Front-End <strong>(HTML5/CSS3)</strong> e buscando bagagem em Back-End <strong>(JavaScript, Python e PHP)</strong>.</p>  
-          <p>I'm a training developer passionate about creating modern, functional, and accessible interfaces. My work focuses on the user experience and clean code.Currently studying <strong>Systems Analysis and Development</strong>(technologist degree) and <strong>FullStack Programming</strong> , with more experience in Front-End <strong>(HTML5/CSS3)</strong> and seeking expertise in Back-End <strong>(JavaScript, Python, and PHP)</strong>.</p>
-        
+      <div class="language-bar">
+        <a
+          href="#"
+          id="language-toggle"
+          class="language-link"
+          lang="en"
+          aria-label="Translate the entire page to English"
+        >
+          English ↗
+        </a>
+      </div>
+
+      <!-- SOBRE MIM -->
+      <section id="sobre">
+
+        <h2 data-i18n="about-title">Sobre Mim</h2>
+
+        <p data-i18n="bio-1">
+          Sou uma profissional em transição de carreira para a área de tecnologia,
+          com <strong>6 anos de experiência operacional na indústria farmacêutica</strong>
+          e, nos últimos 2 anos, dedicada à construção de conhecimentos em
+          <strong>Desenvolvimento de Software e Análise de Dados</strong>.
+        </p>
+
+        <p data-i18n="bio-2">
+          Atualmente, curso <strong>Análise e Desenvolvimento de Sistemas</strong>
+          e aprimoro minhas habilidades em desenvolvimento Front-End, com HTML5 e CSS3,
+          além de JavaScript e Python. Na área de dados, venho desenvolvendo
+          conhecimentos em <strong>Python, SQL, Power BI e Business Intelligence</strong>,
+          com foco em análise, tratamento e visualização de dados para transformar
+          informações em insights relevantes.
+        </p>
+
+        <p data-i18n="bio-3">
+          Minha trajetória profissional fortaleceu competências essenciais, como
+          <strong>resolução de problemas, pensamento analítico e aprendizado contínuo</strong>,
+          que aplico tanto na minha experiência operacional quanto nos desafios técnicos
+          que venho explorando.
+        </p>
+
+        <p data-i18n="bio-4">
+          Busco uma oportunidade para integrar minha experiência profissional aos
+          conhecimentos em tecnologia, contribuindo para o desenvolvimento de
+          soluções eficientes, a melhoria de processos e a
+          <strong>tomada de decisões orientada por dados</strong>.
+        </p>
+
       </section>
 
-      <section>
-        <h2>Minhas Habilidades | My Skills</h2>
+      <!-- HABILIDADES -->
+      <section id="habilidades">
+
+        <h2 data-i18n="skills-title">Minhas Habilidades</h2>
 
         <div class="services">
-          <div class="service">
-            <i class="fas fa-code"></i>
-            <h3>Desenvolvimento  Development</h3>
-            <p>Criação de sites e sistemas personalizados, utilizando <strong>HTML5, CSS3</strong> e <strong>JavaScript</strong></p>
-            <p>Desingning personalized sistems and sites. Using <strong>HTML5, CSS3</strong> e <strong>JavaScript</strong></p>
-          </div>
 
           <div class="service">
-            <i class="fas fa-search"></i>
-            <h3>Inglês Avançado  Advanced English (First Certificate of English)</h3>
-            <p>Inglês <strong>avançado</strong>, com boa fluência na comunicação oral e  escrita.</p>
-            <p>
-                <strong>Advanced</strong> English with good oral and speak understanding. 
+            <i class="fas fa-code" aria-hidden="true"></i>
+
+            <h3 data-i18n="development-title">
+              Desenvolvimento de Software
+            </h3>
+
+            <p data-i18n="development-description">
+              Criação de sites e aplicações, utilizando
+              <strong>HTML5, CSS3, JavaScript e Python</strong>.
             </p>
           </div>
 
           <div class="service">
-            <i class="fas fa-database"></i>
-            <h3>Banco de Dados Database</h3>
-            <p>Modelagem e organização de dados.</p>
-            <p>Organization and Data Modeling</p>
+            <i class="fas fa-language" aria-hidden="true"></i>
+
+            <h3 data-i18n="english-title">
+              Inglês Avançado
+            </h3>
+
+            <p data-i18n="english-description">
+              Inglês avançado, com boa fluência na comunicação oral e escrita.
+            </p>
           </div>
 
           <div class="service">
-            <i class="fas fa-shield-alt"></i>
-            <h3>Security</h3>
-            <p>Boas práticas de segurança e proteção.</p>
+            <i class="fas fa-database" aria-hidden="true"></i>
 
-            <p>
-                Good safety and security practices.
+            <h3 data-i18n="database-title">
+              Análise de Dados e Banco de Dados
+            </h3>
+
+            <p data-i18n="database-description">
+              Organização, modelagem e análise de dados utilizando
+              <strong>Python, SQL e ferramentas de Business Intelligence</strong>.
             </p>
-
           </div>
+
+          <div class="service">
+            <i class="fas fa-shield-alt" aria-hidden="true"></i>
+
+            <h3 data-i18n="security-title">
+              Boas Práticas e Segurança
+            </h3>
+
+            <p data-i18n="security-description">
+              Atenção aos processos, organização e aplicação de boas práticas
+              no desenvolvimento de soluções.
+            </p>
+          </div>
+
         </div>
       </section>
 
     </main>
 
   </div>
- 
 
-  
+  <!-- RODAPÉ -->
   <footer class="footer-global">
-    <p>© 2026 • Desenvolvido por 
-        <a href="https://www.linkedin.com/in/let%C3%ADcia-marcolino-00015a126/" target="_blank"><em>Letícia Marcolino</em></a>
+
+    <p>
+      <span data-i18n="footer-text">© 2026 • Desenvolvido por</span>
+
+      <a
+        href="https://www.linkedin.com/in/let%C3%ADcia-marcolino-00015a126/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <em>Letícia Marcolino</em>
+      </a>
     </p>
 
-    
   </footer>
-
 
 </body>
 </html>
